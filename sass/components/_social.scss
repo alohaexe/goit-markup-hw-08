@@ -1,0 +1,34 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $bkg-icon;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+    transition: background-color $anim-duration $anim-function;
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $primary-white-color;
+    transition: fill $anim-duration $anim-function;
+  }
+}

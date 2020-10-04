@@ -1,0 +1,154 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: $footer-color;
+
+  @include for-size(desktop) {
+    text-align: left;
+  }
+  &__container {
+    @include for-size(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include for-size(desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: $primary-white-color;
+    text-transform: uppercase;
+  }
+}
+
+.address {
+  font-style: normal;
+
+  &-container {
+    width: 231px;
+    margin-bottom: 60px;
+
+    @include for-size(to-tablet) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.contacts {
+  margin-top: 16px;
+  line-height: 1.71;
+  color: $primary-white-color;
+
+  &__item--color {
+    color: $contacts-footer;
+  }
+
+  &__item:not(:first-child) {
+    margin-top: 4px;
+  }
+
+  &__item:hover,
+  &__item:focus,
+  &__item--color:hover {
+    color: $accent-color;
+  }
+}
+
+.social-container {
+  width: 206px;
+
+  @include for-size(to-tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  @include for-size(tablet) {
+    margin-left: 165px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
+}
+
+.social__list {
+  display: flex;
+}
+.social__item--footer:not(:last-child) {
+  margin-right: 10px;
+}
+.social__item--footer {
+  fill: $primary-white-color;
+  background: none;
+}
+.social__item--footer {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer subscribe */
+
+.subscribe {
+  @include for-size(desktop) {
+    padding-top: 12px;
+    margin-left: 93px;
+  }
+
+  &__form {
+    @include for-size(tablet-desktop) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: $footer-color;
+    color: $primary-white-color;
+    transition: border-color $anim-duration $anim-function;
+    cursor: pointer;
+
+    @include for-size(mobile-desktop) {
+      width: 450px;
+    }
+    @include for-size(desktop) {
+      width: 358px;
+    }
+  }
+
+  &__input:hover,
+  &__input:focus {
+    border-color: $primary-white-color;
+  }
+
+  &__form .button {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    @include for-size(desktop) {
+      margin-left: 8px;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-left: 10px;
+  }
+}

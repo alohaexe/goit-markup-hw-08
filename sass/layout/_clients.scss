@@ -1,0 +1,51 @@
+.clients {
+  background-color: $primary-white-color;
+
+  &__list {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 15px;
+    width: calc((100% - 30px * 2) / 2);
+
+    @include for-size(tablet) {
+      width: calc((100% - 30px * 3) / 3);
+    }
+    @include for-size(desktop) {
+      width: calc((100% - 30px * 6) / 6);
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include for-size(to-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__icon {
+    fill: $bkg-icon;
+    transition: fill 1s;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    border: 1px solid $bkg-icon;
+    border-radius: 4px;
+
+    @include for-size(desktop) {
+      width: 170px;
+    }
+  }
+  &__link:hover &__icon {
+    fill: $accent-color;
+  }
+  &__link:hover {
+    border: 1px solid $accent-color;
+  }
+}

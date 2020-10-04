@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  background-color: $primary-white-color;
+  border-bottom: 1px solid #ececec;
+
+  @include for-size(tablet) {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

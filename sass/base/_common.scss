@@ -1,0 +1,81 @@
+.page {
+  font-family: $default-font;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+  background-color: $primary-white-color;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
+  @include for-size(tablet) {
+    width: 768px;
+  }
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  transition: color $anim-duration $anim-function;
+}
+
+.flex {
+  display: flex;
+  // align-items: center;
+}
+
+.section {
+  @include for-size(to-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.section__title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}

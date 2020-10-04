@@ -1,0 +1,82 @@
+.navigation {
+  display: flex;
+  align-items: center;
+
+  @include for-size(to-tablet) {
+    justify-content: space-between;
+  }
+}
+// @include for-size(to-tablet) {
+//   // display: none;
+// }
+
+// @include for-size(tablet) {
+//   display: flex;
+//   align-items: center;
+// }
+// @include for-size(desktop) {
+//   // padding-top: 32px;
+//   // padding-bottom: 32px;
+
+// }
+// }
+
+.navbar {
+  @include for-size(to-tablet) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    align-items: center;
+  }
+  @include for-size(desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__item:not(:last-child) {
+    @include for-size(to-tablet) {
+      margin-bottom: 40px;
+    }
+    @include for-size(tablet) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
+
+.current {
+  position: relative;
+  color: $accent-color;
+
+   &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    top: 20px;
+    border-radius: 2px;
+    background-color: $accent-color;
+
+    @include for-size(tablet) {
+      top: 46px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.features {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 0;
+  }
+
+  &__list {
+    @include for-size(tablet) {
+      margin: -15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include for-size(desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    text-transform: uppercase;
+
+    @include for-size(to-tablet) {
+      text-align: center;
+    }
+  }
+  &__item {
+    @include for-size(to-tablet) {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    @include for-size(tablet) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+    @include for-size(desktop) {
+      width: calc((100% - 4 * 30px) / 4);
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include for-size(to-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+  &__item:not(:first-child) {
+    @include for-size(desktop) {
+      margin-left: 30px;
+    }
+  }
+
+  &__item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    margin-bottom: 30px;
+    background-size: 70px;
+    background-color: $backgound-secondary;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+  }
+  &__item:nth-child(1)::before {
+    background-image: url(../images/svg/antenna.svg);
+  }
+  &__item:nth-child(2)::before {
+    background-image: url(../images/svg/clock.svg);
+  }
+  &__item:nth-child(3)::before {
+    background-image: url(../images/svg/diagram.svg);
+  }
+  &__item:nth-child(4)::before {
+    background-image: url(../images/svg/astronaut.svg);
+  }
+  &__text {
+    line-height: 1.8;
+    color: $secondary-text-color;
+  }
+}
