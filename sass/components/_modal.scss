@@ -136,7 +136,7 @@
 .form-checkbox {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 30px;
   line-height: 1.16;
   font-size: 12px;
@@ -145,7 +145,6 @@
   cursor: pointer;
 
   @include for-size(desktop) {
-    justify-content: space-around;
     font-size: 14px;
     line-height: 1.71;
   }
@@ -156,6 +155,8 @@
 }
 
 .form-checkbox-custom {
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 5px;
   width: 16px;
   height: 15px;

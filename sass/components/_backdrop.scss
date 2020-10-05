@@ -8,6 +8,7 @@
   opacity: 1;
   transition: opacity $anim-duration $anim-function;
   overflow-y: scroll;
+  z-index: 900;
 }
 
 .backdrop.is-hidden {
