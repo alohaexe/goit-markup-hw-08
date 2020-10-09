@@ -18,11 +18,16 @@
   }
   &__about {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+
+    @include for-size(desktop) {
+      padding-bottom: 30px;
+    }
   }
   &__header {
     margin-bottom: 10px;
     font-weight: 500;
+    line-height: 1.19;
   }
 
   &__skill {
@@ -51,7 +56,6 @@
     }
 
     @include for-size(desktop) {
-     
     }
   }
 

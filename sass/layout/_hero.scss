@@ -1,11 +1,12 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 120px;
-
+  padding-top: 118px;
+  padding-bottom: 118px;
   height: 400px;
   max-width: 480px;
-
+  text-align: center;
+  vertical-align: middle;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -30,7 +31,6 @@
   }
 
   @include for-size(tablet) {
-    padding-top: 118px;
     max-width: 768px;
     background-image: linear-gradient(
         to right,
@@ -56,8 +56,9 @@
 
   @include for-size(desktop) {
     padding-top: 200px;
+    padding-bottom: 200px;
     max-width: 1600px;
-    height: 600px;
+    // height: 600px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -107,4 +108,3 @@
     }
   }
 }
-

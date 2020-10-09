@@ -3,22 +3,23 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-
+  width: 100%;
   border-radius: 4px;
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform $anim-duration $anim-function;
+
   @include for-size(mobile) {
     width: 450px;
-    height: 609px;
+    // height: 609px;
   }
 
   @include for-size(tablet) {
     position: absolute;
     // top: 50%;
     // left: 50%;
-    // transform: translate(-50%, 10%) scale(1) rotate(0);
+    // transform: translate(-50%, 50%) scale(1) rotate(0);
   }
   @include for-size(to-tablet) {
     position: relative;
@@ -134,13 +135,12 @@
 }
 
 .form-checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 30px;
+  display: inline-block;
   line-height: 1.16;
   font-size: 12px;
   letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 30px;
   color: $secondary-text-color;
   cursor: pointer;
 

@@ -1,14 +1,17 @@
 .header {
-  position: fixed;
-  z-index: 800;
-  top: 0;
-  width: 100%;
+  // position: fixed;
+  // z-index: 800;
+  // top: 0;
+  // width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   background-color: $primary-white-color;
   border-bottom: 1px solid #ececec;
+  max-width: 1600px;
 
-  @include for-size(tablet) {
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+  // @include for-size(tablet) {
+  //   position: relative;
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  // }
 }

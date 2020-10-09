@@ -18,6 +18,7 @@
     }
   }
   &__title {
+    display: block;
     margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.14;
@@ -114,7 +115,8 @@
 
   &__input {
     margin-bottom: 20px;
-
+    width: 100%;
+    max-width: 450px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -123,9 +125,10 @@
     transition: border-color $anim-duration $anim-function;
     cursor: pointer;
 
-    @include for-size(mobile-desktop) {
+@include for-size(tablet) {
       width: 450px;
     }
+
     @include for-size(desktop) {
       width: 358px;
     }
