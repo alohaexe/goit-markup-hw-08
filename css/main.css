@@ -1330,19 +1330,19 @@ img {
 
 .address-container {
   width: 231px;
-  margin-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .address-container {
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 60px;
   }
 }
 
 .contacts {
-  margin-top: 16px;
-  line-height: 1.71;
+  margin-top: 20px;
+  line-height: 1.58;
   color: #ffffff;
 }
 
@@ -1351,7 +1351,7 @@ img {
 }
 
 .contacts__item:not(:first-child) {
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .contacts__item:hover, .contacts__item:focus, .contacts__item--color:hover {
@@ -1396,6 +1396,10 @@ img {
 .social__item--footer {
   fill: #ffffff;
   background: none;
+}
+
+.social__item--footer .social__icon {
+  fill: #ffffff;
 }
 
 .social__item--footer {

@@ -32,18 +32,19 @@
 
   &-container {
     width: 231px;
-    margin-bottom: 60px;
+   
 
-    @include for-size(to-tablet) {
+    @include for-size(to-desktop) {
       margin-right: auto;
       margin-left: auto;
+       margin-bottom: 60px;
     }
   }
 }
 
 .contacts {
-  margin-top: 16px;
-  line-height: 1.71;
+  margin-top: 20px;
+   line-height: 1.58;
   color: $primary-white-color;
 
   &__item--color {
@@ -51,7 +52,8 @@
   }
 
   &__item:not(:first-child) {
-    margin-top: 4px;
+    margin-top: 8px;
+
   }
 
   &__item:hover,
@@ -88,6 +90,10 @@
 .social__item--footer {
   fill: $primary-white-color;
   background: none;
+  
+  & .social__icon {
+    fill: $primary-white-color;
+  }
 }
 .social__item--footer {
   border-radius: 50%;
