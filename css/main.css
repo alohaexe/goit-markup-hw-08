@@ -1372,7 +1372,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .social-container {
-    margin-left: 165px;
+    margin-left: auto;
+    margin-right: 74px;
   }
 }
 
