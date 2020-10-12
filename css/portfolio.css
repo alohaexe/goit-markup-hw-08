@@ -195,6 +195,7 @@ summary {
   letter-spacing: 0.03em;
   color: #212121;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 .container {
